@@ -27,7 +27,10 @@ async function getRecipeFromMistral(ingredientsArr) {
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
             ],
             max_tokens: 1024,
-        })
+        });
+
+		console.log(response);
+		
         return response.choices[0].message.content;
     } catch (err) {
         console.error(err.message);
