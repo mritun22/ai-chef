@@ -23,15 +23,20 @@ const anthropic = new Anthropic({
 async function getRecipeFromChefClaude(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
 
-    const msg = await anthropic.messages.create({
-        model: "claude-3-haiku-20240307",
-        max_tokens: 1024,
-        system: SYSTEM_PROMPT,
-        messages: [
-            { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
-        ],
-    });
-    return msg.content[0].text;
+	try {
+		const msg = await anthropic.messages.create({
+			model: "claude-3-haiku-20240307",
+			max_tokens: 1024,
+			system: SYSTEM_PROMPT,
+			messages: [
+				{ role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
+			],
+    	});
+		return msg.content[0].text;
+	}
+	catch (error) {
+		console.error(error);
+	}
 }
 
 
@@ -51,6 +56,7 @@ app.post("/get-recipe", (req, res) => {
 		})
 		.catch(err => {
 			console.error(err);
+			res.status(500).send("Internal Server Error");
 		});
 });
 
