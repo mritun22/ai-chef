@@ -93,7 +93,7 @@ form > button:disabled {
 
 .ingredients-panel {
 	display: flex;
-	align-items: end;
+	align-items: start;
 	justify-content: space-between;
 }
 
@@ -127,6 +127,7 @@ form > button:disabled {
 	border-radius: 6px;
 	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 
+	font-size: 0.8rem;
 	color: #fafaf8;
 	background-color: #ab2a2f;
 
@@ -140,13 +141,8 @@ form > button:disabled {
 
 
 /* `.get-recipe` div */
-/*
-As the parent of `.get-recipe` which is `.ingredients-list` has set `width` + `margin-inline: auto` to center it, there's no need to set `width` + `margin-inline: auto` on `.get-recipe`
-*/
 .get-recipe {
-	/* width: 600px; */
 	margin-block: 3rem;
-	/* margin-inline: auto; */
 
 	padding: 1.5rem 2rem;
 	border-radius: 6px;
@@ -157,11 +153,6 @@ As the parent of `.get-recipe` which is `.ingredients-list` has set `width` + `m
 
 	background-color: #F0EFEB;
 }
-
-/* Following not needed when there's `justify-content: space-between` set on `.get-recipe` */
-/* .get-recipe div {
-	margin-right: auto;
-} */
 
 .get-recipe div h3 {
 	margin-block: 0 0.8rem;
@@ -198,21 +189,7 @@ As the parent of `.get-recipe` which is `.ingredients-list` has set `width` + `m
 }
 
 
-
-/* `SuggestedRecipePlaceholder` component */
-
-.suggested-recipe-container {
-    color: #475467;
-    line-height: 28px;
-    font-size: 1.125rem;
-    font-weight: 400;
-}
-
-.suggested-recipe-container ul li, .suggested-recipe-container ol li {
-    margin-bottom: 8px;
-}
-
-
+/* AI response section */
 main section:last-child {
 	width: 600px;
 	margin-inline: auto;

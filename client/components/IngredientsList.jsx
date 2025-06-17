@@ -21,7 +21,7 @@ export default function IngredientsList(props) {
 					onClick={ props.clearRecipe }
 					disabled={ props.isRemoveRecipeDisabled }
 				>
-					Remove ingredients { props.recipeMarkdown && "& recipe" }
+					Remove all ingredients { props.recipeMarkdown && "& recipe" }
 			</button>
 			}
 		</div>

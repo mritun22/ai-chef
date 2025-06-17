@@ -1,6 +1,6 @@
 import { useState } from "react";
 import IngredientsList from "./IngredientsList.jsx";
-import RecipeFromMistral from "./RecipeFromMistral.jsx";
+import RecipeFromAI from "./RecipeFromAI.jsx";
 
 
 function Main() {
@@ -17,22 +17,6 @@ function Main() {
 		setIngredient(ingredients => [...ingredients, newIngredientInput]);
 	}
 
-	// async function getRecipe() {
-	// 	setIsRemoveRecipeDisabled(true);
-
-	// 	if (recipeMarkdown === "") {
-	// 		const recipeResponse = await getRecipeFromMistral(ingredients);
-	// 		setRecipeMarkdown(recipeResponse);
-	// 	}
-
-	// 	setIsRemoveRecipeDisabled(false);
-	// }
-
-	// function getRecipe() {
-	// 	if (recipeMarkdown === "") {
-	// 		setRecipeMarkdown("Received");
-	// 	}
-	// }
 
 	async function getRecipe() {
 		setIsRemoveRecipeDisabled(true);
@@ -58,7 +42,7 @@ function Main() {
 
 		}
 		catch (err) {
-			console.error("Error fetching data: ", err)
+			console.error("Error fetching data: ", err);
 		}
 
 		setIsRemoveRecipeDisabled(false);
@@ -100,7 +84,7 @@ function Main() {
 		/>
 		}
 
-		{ recipeMarkdown && <RecipeFromMistral recipeMarkdown={ recipeMarkdown } /> }
+		{ recipeMarkdown && <RecipeFromAI recipeMarkdown={ recipeMarkdown } /> }
 	</main>
 
 	);
