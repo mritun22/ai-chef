@@ -29,10 +29,9 @@ async function getRecipeFromMistral(ingredientsArr) {
             max_tokens: 1024,
         });
 
-		console.log(response);
-		
         return response.choices[0].message.content;
     } catch (err) {
+		console.log('aakjf');
         console.error(err.message);
     }
 }
