@@ -19,6 +19,7 @@ const hf = new InferenceClient(process.env.HF_ACCESS_TOKEN);
 
 async function getRecipeFromMistral(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ");
+	console.log("askjf")
     try {
         const response = await hf.chatCompletion({
             model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
@@ -31,7 +32,6 @@ async function getRecipeFromMistral(ingredientsArr) {
 
         return response.choices[0].message.content;
     } catch (err) {
-		console.log('aakjf');
         console.error(err.message);
     }
 }
