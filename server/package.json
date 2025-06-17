@@ -6,7 +6,7 @@
 	"type": "commonjs",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node server.js",
+		"start": "node -r dotenv/config server.js",
 		"dev": "nodemon -r dotenv/config server.js"
 	},
 	"keywords": [],
