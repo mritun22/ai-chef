@@ -1,0 +1,20 @@
+{
+	"name": "chef-mistral-client",
+	"version": "1.0.0",
+	"description": "AI that recommends various recipes based on ingredients",
+	"scripts": {
+		"start": "vite",
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "19.0.0",
+		"react-dom": "19.0.0",
+		"react-markdown": "^10.1.0",
+		"vite": "latest"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "*"
+	}
+}
