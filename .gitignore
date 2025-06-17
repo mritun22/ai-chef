@@ -1,4 +1,4 @@
 server/node_modules
-server/getRecipeFromMistral.js
+server/getRecipe2.js
 server/.env
 client/node_modules
