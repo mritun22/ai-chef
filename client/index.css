@@ -97,6 +97,10 @@ form > button:disabled {
 	justify-content: space-between;
 }
 
+.ingredients-panel div {
+	margin-right: 15px;
+}
+
 .ingredients-panel div h2 {
 	font-weight: 600;
 	font-size: 1.9rem;
@@ -120,6 +124,7 @@ form > button:disabled {
 
 /* `.clear-recipe` button */
 .clear-recipe {
+	flex-shrink: 0;
 	width: 200px;
 	height: 36px;
 

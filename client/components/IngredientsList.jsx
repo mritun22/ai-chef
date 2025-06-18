@@ -16,11 +16,11 @@ export default function IngredientsList(props) {
 			{ props.ingredients.length > 0 &&
 			
 			<button
-					type="button"
-					className="clear-recipe"
-					onClick={ props.clearRecipe }
-					disabled={ props.isRemoveRecipeDisabled }
-				>
+				type="button"
+				className="clear-recipe"
+				onClick={ props.clearRecipe }
+				disabled={ props.isRemoveRecipeDisabled }
+			>
 					Remove all ingredients { props.recipeMarkdown && "& recipe" }
 			</button>
 			}
