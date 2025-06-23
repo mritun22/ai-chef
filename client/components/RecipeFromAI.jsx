@@ -1,11 +1,18 @@
+import { useEffect } from "react";
 import Markdown from "react-markdown";
 
 export default function RecipeFromMistral(props) {
-	console.log(props.recipeMarkdown);
+	useEffect(() => {
+		props.ref.current.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+			inline: "nearest"
+		});
+	}, []);
 	
 	return (
 
-	<section>
+	<section ref={ props.ref }>
 		<h2>Recommended Recipe</h2>
 		<Markdown>
 			{ props.recipeMarkdown }

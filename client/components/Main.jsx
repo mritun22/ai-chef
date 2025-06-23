@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import IngredientsList from "./IngredientsList.jsx";
 import RecipeFromAI from "./RecipeFromAI.jsx";
 
@@ -10,6 +10,8 @@ function Main() {
 	
 	const [isRemoveRecipeDisabled, setIsRemoveRecipeDisabled] = useState(false);
 	const [isAddRecipeDisabled, setIsAddRecipeDisabled] = useState(false);
+
+	const recipeSection = useRef(null);
 
 
 	function addIngredient(formData) {
@@ -84,7 +86,7 @@ function Main() {
 		/>
 		}
 
-		{ recipeMarkdown && <RecipeFromAI recipeMarkdown={ recipeMarkdown } /> }
+		{ recipeMarkdown && <RecipeFromAI recipeMarkdown={ recipeMarkdown } ref={ recipeSection } /> }
 	</main>
 
 	);
