@@ -12,7 +12,7 @@ export default function RecipeFromMistral(props) {
 	
 	return (
 
-	<section ref={ props.ref }>
+	<section ref={ props.ref } className="suggested-recipe">
 		<h2>Recommended Recipe</h2>
 		<Markdown>
 			{ props.recipeMarkdown }

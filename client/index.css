@@ -40,6 +40,11 @@ header {
 
 
 /* `Main` component */
+main {
+	width: 600px;
+	margin-inline: auto;
+}
+
 
 /* `form` */
 form {
@@ -84,13 +89,15 @@ form > button:disabled {
 }
 
 
-/* `.ingredients-list` section */
-.ingredients-list {
-	width: 600px;
-	margin-inline: auto;
+
+/* `initial-instruction` div */
+.initial-instruction {
+	color: #475467;
 }
 
 
+
+/* `.ingredients-panel` section */
 .ingredients-panel {
 	display: flex;
 	align-items: start;
@@ -194,22 +201,19 @@ form > button:disabled {
 }
 
 
-/* AI response section */
-main section:last-child {
-	width: 600px;
-	margin-inline: auto;
-
+/* `.suggested-recipe` section */
+.suggested-recipe {
     font-weight: 400;
     line-height: 28px;
 	color: #475467;
 }
 
-main section:last-child h2{
+.suggested-recipe h2{
 	font-weight: 600;
 	font-size: 1.9rem;
 	color: #141413;
 }
 
-main section:last-child ul li, main section:last-child ol li {
+.suggested-recipe ol li {
     margin-bottom: 8px;
 }

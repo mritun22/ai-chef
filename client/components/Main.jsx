@@ -4,7 +4,6 @@ import RecipeFromAI from "./RecipeFromAI.jsx";
 
 
 function Main() {
-	// Ingredients sample: "mutton", "turmeric", "onion", "gingelly oil"
 	const [ingredients, setIngredient] = useState([]);
 	const [recipeMarkdown, setRecipeMarkdown] = useState("");
 	
@@ -38,6 +37,8 @@ function Main() {
 			}
 
 			const textData = await response.text();
+
+			// LOG
 			console.log(textData);
 
 			setRecipeMarkdown(textData);
@@ -72,8 +73,9 @@ function Main() {
 				name="ingredient"
 				required />
 			<button type="submit" disabled={ isAddRecipeDisabled }>Add ingredient</button>
-			
 		</form>
+
+		{ ingredients.length === 0 && <div className="initial-instruction"> Add atleast 4 ingredients so that I can suggest a recipe...</div> }
 
 		{ ingredients.length > 0 &&
 		<IngredientsList
