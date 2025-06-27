@@ -1,5 +1,5 @@
 {
-	"name": "chef-mistral-backend",
+	"name": "ai-chef-backend",
 	"version": "1.0.0",
 	"description": "AI that recommends various recipes based on ingredients",
 	"main": "server.js",
